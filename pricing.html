@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offerings | French Salon</title>
+    <meta name="description" content="Pricing and offerings for French cultural sessions.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="assets/images/logo.png" alt="French Salon Logo" class="logo-img">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="pricing.html" class="active">Offerings</a></li>
+            </ul>
+        </nav>
+        <a href="booking.html" class="btn-primary">Book Now</a>
+    </header>
+
+    <main>
+        <section style="padding-top: 4rem; min-height: 80vh;">
+            <h1 class="section-title">Our Offerings</h1>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 4rem auto; font-size: 1.2rem;">
+                Choose the perfect cultural experience package for your senior living community.
+            </p>
+            
+            <div class="pricing-cards">
+                <div class="price-card">
+                    <h3>Intro Pilot</h3>
+                    <div class="price-value">Free</div>
+                    <p>A complimentary first session to see how your residents respond to the experience.</p>
+                    <br>
+                    <a href="booking.html?package=pilot" class="btn-primary" style="width: 100%;">Book Pilot</a>
+                </div>
+                
+                <div class="price-card">
+                    <h3>Single Session</h3>
+                    <div class="price-value">$180</div>
+                    <p>A one-time immersive cultural journey for your community, complete with sensory elements.</p>
+                    <br>
+                    <a href="booking.html?package=single" class="btn-primary" style="width: 100%;">Book Session</a>
+                </div>
+                
+                <div class="price-card" style="border-color: var(--color-gold); transform: scale(1.05); z-index: 1;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--color-gold); color: var(--color-navy); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">Most Popular</div>
+                    <h3>4-Week Series</h3>
+                    <div class="price-value">$500</div>
+                    <p>A comprehensive month-long exploration of French culture, themes, and destinations.</p>
+                    <br>
+                    <a href="booking.html?package=series" class="btn-primary" style="width: 100%;">Book Series</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; French Salon</p>
+    </footer>
+
+</body>
+</html>

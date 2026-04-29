@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session | French Salon</title>
+    <meta name="description" content="Book your French Salon cultural experience.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="assets/images/logo.png" alt="French Salon Logo" class="logo-img">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="pricing.html">Offerings</a></li>
+            </ul>
+        </nav>
+        <a href="booking.html" class="btn-primary">Book Now</a>
+    </header>
+
+    <main>
+        <section style="padding-top: 6rem; min-height: 80vh;">
+            <div class="booking-section" style="margin-top: 2rem;">
+                <h2 class="section-title" id="booking-title">Book Your Experience</h2>
+                <p id="booking-desc" style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    We are thrilled to bring the magic of France to your community. Please fill out the details below to secure your session.
+                </p>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Community or Contact Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="package" name="package" required style="width: 100%; padding: 15px 20px; border: none; border-radius: 30px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9); transition: var(--transition); cursor: pointer; color: var(--color-navy);">
+                            <option value="pilot">Intro Pilot (Free)</option>
+                            <option value="single">Single Session ($180)</option>
+                            <option value="series">4-Week Series ($500)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="notes" name="notes" placeholder="Any special requests or details?" rows="3" style="width: 100%; padding: 15px 20px; border: none; border-radius: 20px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9); transition: var(--transition); resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" id="submit-btn">Confirm Booking</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; French Salon</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Automatically select the package and adjust text based on the URL parameter
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const packageType = urlParams.get('package');
+            
+            if (packageType) {
+                const selectElement = document.getElementById('package');
+                selectElement.value = packageType;
+                
+                // Customize text to make it feel special
+                const title = document.getElementById('booking-title');
+                const desc = document.getElementById('booking-desc');
+                const btn = document.getElementById('submit-btn');
+                
+                if (packageType === 'single') {
+                    title.innerText = 'Book a Single Session';
+                    desc.innerText = 'Treat your residents to a beautiful, immersive one-time journey to France for just $180.';
+                } else if (packageType === 'series') {
+                    title.innerText = 'Book the 4-Week Series';
+                    desc.innerText = 'Secure a comprehensive 4-week cultural exploration for $500. Your residents will love the continued engagement!';
+                } else if (packageType === 'pilot') {
+                    title.innerText = 'Book Your Free Intro Pilot';
+                    desc.innerText = 'Experience the magic of the French Salon completely free of charge to see how your residents respond.';
+                    btn.innerText = 'Request Free Pilot';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
