@@ -229,12 +229,13 @@ section {
     background-color: var(--color-gold);
     width: 60px;
     height: 60px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin: 0 auto 1.5rem auto;
+    margin-bottom: 1.5rem;
     box-shadow: var(--shadow-soft);
+    padding-left: 2px; /* Optical adjustment to center the number perfectly */
 }
 
 .step-card h3 {
@@ -244,42 +245,38 @@ section {
     z-index: 1;
 }
 
-/* --- Why It Matters Grid (Modern Pill Layout) --- */
+/* --- Why It Matters Grid (Clean Minimalist Tags) --- */
 .experience-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
-    max-width: 900px;
-    margin: 3rem auto 4rem auto;
+    gap: 1.2rem;
+    max-width: 800px;
+    margin: 2rem auto 4rem auto;
 }
 
 .exp-item {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    box-shadow: var(--shadow-soft);
+    background: transparent;
+    border: 1px solid var(--color-gold);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
     transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: default;
 }
 
 .exp-item h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--color-navy);
     margin: 0;
     font-weight: 500;
+    font-family: var(--font-body);
     transition: var(--transition);
 }
 
 .exp-item:hover {
     background: var(--color-gold);
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--color-gold);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
 }
 
 .exp-item:hover h4 {
