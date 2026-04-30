@@ -224,12 +224,17 @@ section {
 
 .step-number {
     font-family: var(--font-heading);
-    font-size: 4rem;
-    color: rgba(197, 160, 89, 0.2);
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    line-height: 1;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    background-color: var(--color-gold);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: var(--shadow-soft);
 }
 
 .step-card h3 {
@@ -239,95 +244,46 @@ section {
     z-index: 1;
 }
 
-/* --- Experience Grid (Triangular Zig-Zag Layout) --- */
+/* --- Why It Matters Grid (Modern Pill Layout) --- */
 .experience-grid {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
     max-width: 900px;
-    width: 100%;
-    margin: 4rem auto;
-    position: relative;
-    padding: 6rem 0;
-    overflow-x: auto;
-}
-
-/* Winding zig-zag line behind the items */
-.experience-grid::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 900px;
-    height: 100px;
-    transform: translateY(-50%);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='100'%3E%3Cpath d='M0 50 L75 10 L225 90 L300 50' fill='none' stroke='%238B1C31' stroke-width='2' stroke-dasharray='6,6'/%3E%3C/svg%3E");
-    background-repeat: repeat-x;
-    background-position: left center;
-    z-index: 1;
-    opacity: 0.8;
+    margin: 3rem auto 4rem auto;
 }
 
 .exp-item {
-    text-align: center;
-    padding: 0;
-    width: 150px;
-    flex: 0 0 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: var(--shadow-soft);
     transition: var(--transition);
-    position: relative;
-    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
 }
 
 .exp-item h4 {
-    background: var(--color-bg);
-    padding: 8px 15px;
-    border-radius: 20px;
-    border: 1px solid var(--color-red);
+    font-size: 1.2rem;
     color: var(--color-navy);
-    font-size: 1.1rem;
-    box-shadow: var(--shadow-soft);
     margin: 0;
+    font-weight: 500;
     transition: var(--transition);
 }
 
-/* Add dots at the tips */
-.exp-item::after {
-    content: '';
-    display: block;
-    width: 12px;
-    height: 12px;
-    background: var(--color-red);
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Odd items at top tip */
-.exp-item:nth-child(odd) {
-    transform: translateY(-40px);
-}
-.exp-item:nth-child(odd)::after {
-    bottom: -15px;
-}
-
-/* Even items at bottom tip */
-.exp-item:nth-child(even) {
-    transform: translateY(40px);
-}
-.exp-item:nth-child(even)::after {
-    top: -15px;
+.exp-item:hover {
+    background: var(--color-gold);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-gold);
 }
 
 .exp-item:hover h4 {
-    background: var(--color-navy);
     color: var(--color-white);
-    transform: scale(1.05);
 }
 
 
