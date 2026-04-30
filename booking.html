@@ -70,32 +70,42 @@
 
     <script src="main.js"></script>
     <script>
-        // Automatically select the package and adjust text based on the URL parameter
+        function updateBookingDetails(packageType) {
+            const title = document.getElementById('booking-title');
+            const desc = document.getElementById('booking-desc');
+            const btn = document.getElementById('submit-btn');
+
+            if (packageType === 'single') {
+                title.innerText = 'Book a Single Session';
+                desc.innerText = 'Treat your residents to a beautiful, immersive one-time journey to France for just $180.';
+                btn.innerText = 'Confirm Booking';
+            } else if (packageType === 'series') {
+                title.innerText = 'Book the 4-Week Series';
+                desc.innerText = 'Secure a comprehensive 4-week cultural exploration for $600. Your residents will love the continued engagement!';
+                btn.innerText = 'Confirm Booking';
+            } else if (packageType === 'pilot') {
+                title.innerText = 'Book Your Free Intro Pilot';
+                desc.innerText = 'Experience the magic of the French Salon completely free of charge to see how your residents respond.';
+                btn.innerText = 'Request Free Pilot';
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('package');
             const urlParams = new URLSearchParams(window.location.search);
             const packageType = urlParams.get('package');
 
             if (packageType) {
-                const selectElement = document.getElementById('package');
                 selectElement.value = packageType;
-
-                // Customize text to make it feel special
-                const title = document.getElementById('booking-title');
-                const desc = document.getElementById('booking-desc');
-                const btn = document.getElementById('submit-btn');
-
-                if (packageType === 'single') {
-                    title.innerText = 'Book a Single Session';
-                    desc.innerText = 'Treat your residents to a beautiful, immersive one-time journey to France for just $180.';
-                } else if (packageType === 'series') {
-                    title.innerText = 'Book the 4-Week Series';
-                    desc.innerText = 'Secure a comprehensive 4-week cultural exploration for $600. Your residents will love the continued engagement!';
-                } else if (packageType === 'pilot') {
-                    title.innerText = 'Book Your Free Intro Pilot';
-                    desc.innerText = 'Experience the magic of the French Salon completely free of charge to see how your residents respond.';
-                    btn.innerText = 'Request Free Pilot';
-                }
             }
+            
+            // Initialize with current value
+            updateBookingDetails(selectElement.value);
+
+            // Update dynamically when changed
+            selectElement.addEventListener('change', (event) => {
+                updateBookingDetails(event.target.value);
+            });
         });
     </script>
 </body>
