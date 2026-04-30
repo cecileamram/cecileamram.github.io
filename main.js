@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
     forms.forEach(form => {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
+
+            const emailInput = form.querySelector('input[name="email"]');
+            if (emailInput) {
+                // Simple but robust regex for email validation ensuring a TLD exists
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.value)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+            }
             
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerText;
