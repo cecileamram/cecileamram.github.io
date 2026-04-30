@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <header>
@@ -28,8 +30,10 @@
         <section style="padding-top: 6rem; min-height: 80vh;">
             <div class="booking-section" style="margin-top: 2rem;">
                 <h2 class="section-title" id="booking-title">Book Your Experience</h2>
-                <p id="booking-desc" style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    We are thrilled to bring the magic of France to your community. Please fill out the details below to secure your session.
+                <p id="booking-desc"
+                    style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    We are thrilled to bring the magic of France to your community. Please fill out the details below to
+                    secure your session.
                 </p>
                 <form class="booking-form">
                     <div class="form-group">
@@ -42,14 +46,16 @@
                         <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
                     </div>
                     <div class="form-group">
-                        <select id="package" name="package" required style="width: 100%; padding: 15px 40px 15px 20px; border: 2px solid var(--color-gold); border-radius: 30px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23b59b56%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 20px top 50%; background-size: 12px auto; appearance: none; -webkit-appearance: none; transition: var(--transition); cursor: pointer; color: var(--color-navy);">
+                        <select id="package" name="package" required
+                            style="width: 100%; padding: 15px 40px 15px 20px; border: 2px solid var(--color-gold); border-radius: 30px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23b59b56%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 20px top 50%; background-size: 12px auto; appearance: none; -webkit-appearance: none; transition: var(--transition); cursor: pointer; color: var(--color-navy);">
                             <option value="pilot">Intro Pilot (Free)</option>
                             <option value="single">Single Session ($180)</option>
                             <option value="series">4-Week Series ($500)</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea id="notes" name="notes" placeholder="Any special requests or details?" rows="3" style="width: 100%; padding: 15px 20px; border: none; border-radius: 20px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9); transition: var(--transition); resize: vertical;"></textarea>
+                        <textarea id="notes" name="notes" placeholder="Any special requests or details?" rows="3"
+                            style="width: 100%; padding: 15px 20px; border: none; border-radius: 20px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9); transition: var(--transition); resize: vertical;"></textarea>
                     </div>
                     <button type="submit" class="btn-submit" id="submit-btn">Confirm Booking</button>
                 </form>
@@ -58,7 +64,8 @@
     </main>
 
     <footer>
-        <p>&copy; French Salon | <a href="mailto:cecile@amr.am" style="color: inherit; text-decoration: none;">Contact: cecile@amr.am</a></p>
+        <p>&copy; French Salon | <a href="mailto:contact@french-salon.com"
+                style="color: inherit; text-decoration: none;">Contact: contact@french-salon.com</a></p>
     </footer>
 
     <script src="main.js"></script>
@@ -67,16 +74,16 @@
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const packageType = urlParams.get('package');
-            
+
             if (packageType) {
                 const selectElement = document.getElementById('package');
                 selectElement.value = packageType;
-                
+
                 // Customize text to make it feel special
                 const title = document.getElementById('booking-title');
                 const desc = document.getElementById('booking-desc');
                 const btn = document.getElementById('submit-btn');
-                
+
                 if (packageType === 'single') {
                     title.innerText = 'Book a Single Session';
                     desc.innerText = 'Treat your residents to a beautiful, immersive one-time journey to France for just $180.';
@@ -92,4 +99,5 @@
         });
     </script>
 </body>
+
 </html>
