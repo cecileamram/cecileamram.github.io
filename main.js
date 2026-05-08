@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const forms = document.querySelectorAll('.booking-form');
     
     // Replace this with your actual Web3Forms Access Key
-    const WEB3FORMS_ACCESS_KEY = "0d14d12e-b371-438d-950b-9494e6249e2c";
+    const WEB3FORMS_ACCESS_KEY = "2176489b-98a3-4e01-b53d-9d53fa473b1b";
     
     forms.forEach(form => {
         form.addEventListener('submit', function(event) {
