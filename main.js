@@ -53,4 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Flip cards click-to-flip behavior for mobile/touch
+    const flipCards = document.querySelectorAll('.exp-item');
+    flipCards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
+    });
 });

@@ -313,8 +313,14 @@ section {
     transform-style: preserve-3d;
 }
 
-.exp-item:hover .flip-card-inner {
+.exp-item.flipped .flip-card-inner {
     transform: rotateY(180deg);
+}
+
+@media (hover: hover) {
+    .exp-item:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
 }
 
 .flip-card-front,
@@ -560,4 +566,5 @@ footer {
         display: none;
         /* simple mobile menu handling omitted for brevity, but could add later */
     }
+
 }
