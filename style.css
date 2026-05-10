@@ -298,8 +298,8 @@ section {
 }
 
 .exp-item {
-    width: 170px;
-    height: 170px;
+    width: 200px;
+    height: 200px;
     perspective: 1000px;
     cursor: pointer;
     flex-shrink: 0; /* Prevent squishing on mobile screens */
@@ -344,7 +344,7 @@ section {
 }
 
 .flip-card-front h4 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--color-navy);
     margin: 0;
     font-weight: 500;
