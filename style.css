@@ -568,12 +568,19 @@ footer {
         /* simple mobile menu handling omitted for brevity, but could add later */
     }
 
+    /* Fix scrolling cutoff bug on mobile */
+    .experience-grid, .steps-container {
+        justify-content: flex-start;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     /* Make Why It Matters display one at a time on mobile */
     .exp-item {
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 260px;
     }
     .flip-card-front h4 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
