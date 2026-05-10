@@ -568,6 +568,7 @@ footer {
         gap: 1rem;
         padding-top: 1rem;
         padding-bottom: 1.5rem;
+        position: relative; /* Prevent the tall mobile header from sticking and blocking the screen */
     }
 
     nav ul {
