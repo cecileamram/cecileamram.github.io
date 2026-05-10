@@ -229,6 +229,10 @@ section {
     margin-top: 10px;
 }
 
+.swipe-hint {
+    display: none;
+}
+
 /* --- How it Works --- */
 .steps-container {
     display: flex;
@@ -583,6 +587,16 @@ footer {
         justify-content: flex-start;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .swipe-hint {
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        color: var(--color-gold);
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+        font-style: italic;
     }
 
     /* Make Why It Matters display one at a time on mobile */
