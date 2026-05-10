@@ -568,4 +568,12 @@ footer {
         /* simple mobile menu handling omitted for brevity, but could add later */
     }
 
+    /* Make Why It Matters display one at a time on mobile */
+    .exp-item {
+        width: 280px;
+        height: 280px;
+    }
+    .flip-card-front h4 {
+        font-size: 1.4rem;
+    }
 }
