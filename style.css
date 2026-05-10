@@ -563,9 +563,18 @@ footer {
         padding: 2rem;
     }
 
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
     nav ul {
-        display: none;
-        /* simple mobile menu handling omitted for brevity, but could add later */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
     }
 
     /* Fix scrolling cutoff bug on mobile */
