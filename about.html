@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Cecile | French Salon</title>
     <meta name="description" content="About Cecile Amram, founder of French Salon.">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=38">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
+    <!-- Floating Rate Us on Google Side Button -->
+    <a href="https://share.google/I90cQ5FetF9ujFtT4" target="_blank" rel="noopener" class="floating-google-btn">
+        <i class="fa-brands fa-google" style="color: #4285F4; font-size: 1.1rem;"></i>
+        <span>Rate Us on Google</span>
+        <span style="color: #fbbc05;">★ 5.0</span>
+    </a>
 
     <header>
         <a href="index.html" class="logo-link">
@@ -21,13 +30,31 @@
                 <li><a href="pricing.html">Offerings</a></li>
             </ul>
         </nav>
-        <a href="booking.html" class="btn-primary">Book Now</a>
+        <div class="nav-dropdown">
+            <a href="booking.html" class="btn-primary nav-dropdown-btn">
+                Book Experience <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem; margin-left: 6px;"></i>
+            </a>
+            <div class="dropdown-menu">
+                <a href="booking.html?package=pilot" class="dropdown-item">
+                    <span>Intro Pilot</span>
+                    <span class="item-price">Free</span>
+                </a>
+                <a href="booking.html?package=single" class="dropdown-item">
+                    <span>Single Session</span>
+                    <span class="item-price">$190</span>
+                </a>
+                <a href="booking.html?package=series" class="dropdown-item">
+                    <span>4-Week Series <span class="badge">Popular</span></span>
+                    <span class="item-price">$600</span>
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
         <section style="padding-top: 4rem; min-height: 80vh;">
             <h1 class="section-title">About Me</h1>
-            
+
             <div class="about-container">
                 <div class="about-image">
                     <img src="assets/images/about_me.jpg" alt="Cecile Amram - French Culture Expert">
@@ -35,10 +62,12 @@
                 <div class="about-content">
                     <h2>Bonjour&nbsp;!</h2>
                     <p>
-                        I’m Cecile Amram, originally from Alsace, the charming, wine-loving region of France near Germany. 
+                        I’m Cecile Amram, originally from Alsace, the charming, wine-loving region of France near
+                        Germany.
                     </p>
                     <p>
-                        I’ve been in education and teaching for many years, living in California with my family for 12 years, and now settling up in beautiful St. Pete, Florida. 
+                        I’ve been in education and teaching for many years, living in California with my family for 12
+                        years, and now settling up in beautiful St. Pete, Florida.
                     </p>
                     <p>
                         I love sharing my passion for French language and culture. À&nbsp;bientôt&nbsp;!
@@ -60,4 +89,5 @@
     </footer>
 
 </body>
+
 </html>

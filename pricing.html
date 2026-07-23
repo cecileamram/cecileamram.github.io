@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offerings | French Salon</title>
     <meta name="description" content="Pricing and offerings for French cultural sessions.">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=38">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+
+    <!-- Floating Rate Us on Google Side Button -->
+    <a href="https://share.google/I90cQ5FetF9ujFtT4" target="_blank" rel="noopener" class="floating-google-btn">
+        <i class="fa-brands fa-google" style="color: #4285F4; font-size: 1.1rem;"></i>
+        <span>Rate Us on Google</span>
+        <span style="color: #fbbc05;">★ 5.0</span>
+    </a>
 
     <header>
         <a href="index.html" class="logo-link">
@@ -23,13 +30,31 @@
                 <li><a href="pricing.html" class="active">Offerings</a></li>
             </ul>
         </nav>
-        <a href="booking.html" class="btn-primary">Book Now</a>
+        <div class="nav-dropdown">
+            <a href="booking.html" class="btn-primary nav-dropdown-btn">
+                Book Experience <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem; margin-left: 6px;"></i>
+            </a>
+            <div class="dropdown-menu">
+                <a href="booking.html?package=pilot" class="dropdown-item">
+                    <span>Intro Pilot</span>
+                    <span class="item-price">Free</span>
+                </a>
+                <a href="booking.html?package=single" class="dropdown-item">
+                    <span>Single Session</span>
+                    <span class="item-price">$190</span>
+                </a>
+                <a href="booking.html?package=series" class="dropdown-item">
+                    <span>4-Week Series <span class="badge">Popular</span></span>
+                    <span class="item-price">$600</span>
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
         <section style="padding-top: 4rem; min-height: 80vh;">
             <h1 class="section-title">Our Offerings</h1>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 4rem auto; font-size: 1.2rem;">
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 3.5rem auto; font-size: 1.2rem; color: var(--color-text);">
                 Choose the perfect cultural experience package for your senior living community.
             </p>
 
@@ -38,26 +63,21 @@
                     <h3>Intro Pilot</h3>
                     <div class="price-value">Free</div>
                     <p>A complimentary first session to see how your residents respond to the experience.</p>
-                    <br>
                     <a href="booking.html?package=pilot" class="btn-primary" style="width: 100%;">Book Pilot</a>
                 </div>
 
                 <div class="price-card">
                     <h3>Single Session</h3>
-                    <div class="price-value">$180</div>
+                    <div class="price-value">$190</div>
                     <p>A one-time immersive cultural journey for your community, complete with sensory elements.</p>
-                    <br>
                     <a href="booking.html?package=single" class="btn-primary" style="width: 100%;">Book Session</a>
                 </div>
 
-                <div class="price-card" style="border-color: var(--color-gold); transform: scale(1.05); z-index: 1;">
-                    <div
-                        style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--color-gold); color: var(--color-navy); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold;">
-                        Most Popular</div>
+                <div class="price-card featured">
+                    <div class="price-card-badge">Most Popular</div>
                     <h3>4-Week Series</h3>
                     <div class="price-value">$600</div>
                     <p>A comprehensive month-long exploration of French culture, themes, and destinations.</p>
-                    <br>
                     <a href="booking.html?package=series" class="btn-primary" style="width: 100%;">Book Series</a>
                 </div>
             </div>

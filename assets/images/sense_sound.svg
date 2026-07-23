@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyNormandy" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f5efdf"/>
+      <stop offset="100%" stop-color="#e8d9bd"/>
+    </linearGradient>
+    <linearGradient id="cobbleNormandy" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cfbeaa"/>
+      <stop offset="100%" stop-color="#a38f7a"/>
+    </linearGradient>
+    <filter id="shadowNormandy" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1a2a40" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background Sky & Normandy Street -->
+  <rect width="800" height="350" fill="url(#skyNormandy)"/>
+  <rect y="350" width="800" height="150" fill="url(#cobbleNormandy)"/>
+
+  <!-- Normandy Half-Timbered Houses (Colombage) Background -->
+  <!-- House Left -->
+  <path d="M 60 350 L 60 170 L 160 110 L 260 170 L 260 350 Z" fill="#eddcc4" stroke="#5c4531" stroke-width="2"/>
+  <!-- Timber Beams -->
+  <line x1="60" y1="210" x2="260" y2="210" stroke="#5c4531" stroke-width="4"/>
+  <line x1="60" y1="270" x2="260" y2="270" stroke="#5c4531" stroke-width="4"/>
+  <line x1="110" y1="170" x2="110" y2="350" stroke="#5c4531" stroke-width="4"/>
+  <line x1="210" y1="170" x2="210" y2="350" stroke="#5c4531" stroke-width="4"/>
+  <line x1="110" y1="210" x2="160" y2="170" stroke="#5c4531" stroke-width="3"/>
+  <line x1="210" y1="210" x2="160" y2="170" stroke="#5c4531" stroke-width="3"/>
+
+  <!-- House Center/Right -->
+  <path d="M 280 350 L 280 150 L 420 90 L 560 150 L 560 350 Z" fill="#e5d2b7" stroke="#5c4531" stroke-width="2"/>
+  <line x1="280" y1="200" x2="560" y2="200" stroke="#5c4531" stroke-width="4"/>
+  <line x1="280" y1="260" x2="560" y2="260" stroke="#5c4531" stroke-width="4"/>
+  <line x1="350" y1="150" x2="350" y2="350" stroke="#5c4531" stroke-width="4"/>
+  <line x1="490" y1="150" x2="490" y2="350" stroke="#5c4531" stroke-width="4"/>
+
+  <!-- Mont Saint-Michel Distant Coastal Silhouette on Horizon -->
+  <path d="M 600 350 L 640 280 L 655 240 L 660 210 L 665 240 L 680 280 L 750 350 Z" fill="#d9c5ab" opacity="0.85"/>
+  <line x1="660" y1="210" x2="660" y2="185" stroke="#8B1C31" stroke-width="2"/>
+
+  <!-- Cobblestone Detail -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#8c7764" stroke-width="1.5" stroke-dasharray="16,12" opacity="0.4"/>
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#8c7764" stroke-width="1.5" stroke-dasharray="24,14" opacity="0.4"/>
+
+  <!-- Normandy Accordion Musician Emblem -->
+  <g filter="url(#shadowNormandy)" transform="translate(410, 265)">
+    <circle cx="0" cy="0" r="105" fill="#ffffff" stroke="#c5a059" stroke-width="3.5"/>
+    
+    <!-- French Accordion -->
+    <rect x="-65" y="-45" width="26" height="90" rx="5" fill="#8B1C31"/>
+    <circle cx="-52" cy="-25" r="3" fill="#c5a059"/>
+    <circle cx="-52" cy="-10" r="3" fill="#c5a059"/>
+    <circle cx="-52" cy="5" r="3" fill="#c5a059"/>
+    <circle cx="-52" cy="20" r="3" fill="#c5a059"/>
+
+    <path d="M -39 -40 L -25 -45 L -11 -40 L 3 -45 L 17 -40 L 31 -45 L 39 -40 L 39 40 L 31 45 L 17 40 L 3 45 L -11 40 L -25 45 L -39 40 Z" fill="#1a2a40" stroke="#c5a059" stroke-width="1.5"/>
+
+    <rect x="39" y="-45" width="26" height="90" rx="5" fill="#8B1C31"/>
+    <rect x="42" y="-38" width="18" height="12" fill="#ffffff" stroke="#1a2a40" stroke-width="0.8"/>
+    <rect x="42" y="-24" width="18" height="12" fill="#ffffff" stroke="#1a2a40" stroke-width="0.8"/>
+    <rect x="42" y="-10" width="18" height="12" fill="#ffffff" stroke="#1a2a40" stroke-width="0.8"/>
+    <rect x="42" y="4" width="18" height="12" fill="#ffffff" stroke="#1a2a40" stroke-width="0.8"/>
+    <rect x="42" y="18" width="18" height="12" fill="#ffffff" stroke="#1a2a40" stroke-width="0.8"/>
+    <rect x="42" y="32" width="18" height="12" fill="#ffffff" stroke="#1a2a40" stroke-width="0.8"/>
+  </g>
+
+  <!-- Musical Notes in air -->
+  <g fill="#8B1C31">
+    <text x="210" y="190" font-family="'Playfair Display', serif" font-size="44" fill="#8B1C31" font-weight="bold">♪</text>
+    <text x="560" y="180" font-family="'Playfair Display', serif" font-size="48" fill="#c5a059" font-weight="bold">♫</text>
+  </g>
+
+  <!-- Title Banner -->
+  <rect x="230" y="28" width="340" height="44" rx="22" fill="rgba(255, 255, 255, 0.94)" stroke="#c5a059" stroke-width="1.5"/>
+  <text x="400" y="56" font-family="'Playfair Display', serif" font-size="18" fill="#1a2a40" font-weight="600" text-anchor="middle">Normandy Coastal Street Music</text>
+</svg>

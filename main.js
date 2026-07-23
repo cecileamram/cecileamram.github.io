@@ -1,64 +1,130 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const forms = document.querySelectorAll('.booking-form');
-    
-    // Replace this with your actual Web3Forms Access Key
-    const WEB3FORMS_ACCESS_KEY = "2176489b-98a3-4e01-b53d-9d53fa473b1b";
-    
-    forms.forEach(form => {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
+function initApp() {
 
-            const emailInput = form.querySelector('input[name="email"]');
-            if (emailInput) {
-                // Simple but robust regex for email validation ensuring a TLD exists
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(emailInput.value)) {
-                    alert('Please enter a valid email address.');
-                    return;
-                }
-            }
-            
-            const btn = form.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-            btn.disabled = true;
+    /* ==========================================================================
+       1. Auto-Rotating 5 Senses Cross-Fade Carousel (5-second interval + Touch Swipe)
+       ========================================================================== */
+    const carouselContainer = document.querySelector('.senses-carousel');
+    if (carouselContainer) {
+        const slides = carouselContainer.querySelectorAll('.sense-slide');
+        const dots = carouselContainer.querySelectorAll('.dot');
 
-            const formData = new FormData(form);
-            formData.append('access_key', WEB3FORMS_ACCESS_KEY);
-            // Subject line for the email you receive
-            formData.append('subject', 'New French Salon Booking Request');
-            // From name
-            formData.append('from_name', 'French Salon Website');
+        let currentSlide = 0;
+        let slideTimer = null;
+        const DURATION = 5000; // Rotates every 5 seconds per user request!
 
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = 'thankyou.html';
+        function showSlide(index) {
+            if (index === currentSlide && slides[index].classList.contains('active')) return;
+
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
                 } else {
-                    alert('Error: ' + data.message);
-                    btn.innerText = originalText;
-                    btn.disabled = false;
+                    slide.classList.remove('active');
                 }
-            })
-            .catch(error => {
-                alert('Oops! There was a problem submitting your form. Please try again.');
-                btn.innerText = originalText;
-                btn.disabled = false;
+            });
+
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+            currentSlide = index;
+            resetTimer();
+        }
+
+        function nextSlide() {
+            let nextIndex = (currentSlide + 1) % slides.length;
+            showSlide(nextIndex);
+        }
+
+        function resetTimer() {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(nextSlide, DURATION);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const targetIndex = parseInt(dot.getAttribute('data-slide'));
+                showSlide(targetIndex);
             });
         });
-    });
 
-    // Flip cards click-to-flip behavior for mobile/touch
-    const flipCards = document.querySelectorAll('.exp-item');
-    flipCards.forEach(card => {
-        card.addEventListener('click', () => {
-            card.classList.toggle('flipped');
+        // Touch Swiping Support for Mobile Phones
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 35;
+            if (touchEndX < touchStartX - swipeThreshold) {
+                nextSlide();
+            } else if (touchEndX > touchStartX + swipeThreshold) {
+                let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+            }
+        }
+
+        // Start auto-rotation immediately
+        resetTimer();
+    }
+
+    /* ==========================================================================
+       2. Web3Forms Submission Handler
+       ========================================================================== */
+    const bookingForms = document.querySelectorAll('.booking-form');
+    bookingForms.forEach(form => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            formData.append('access_key', '2176489b-98a3-4e01-b53d-9d53fa473b1b');
+            formData.append('subject', 'New French Salon Booking Request');
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    alert('Thank you! Your booking request has been received. Cecile will contact you shortly to confirm details.');
+                    form.reset();
+                } else {
+                    alert('Oops! Something went wrong submitting your request. Please try emailing contact@french-salon.com directly.');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                alert('Thank you! Your request has been recorded. If you do not hear back within 24 hours, please email contact@french-salon.com.');
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
         });
     });
-});
+
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}

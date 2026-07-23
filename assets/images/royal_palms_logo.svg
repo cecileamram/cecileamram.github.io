@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="100%" height="100%">
+  <rect width="400" height="180" fill="#ffffff" rx="12" stroke="#e2d8c3" stroke-width="2"/>
+  <g transform="translate(30, 30)">
+    <!-- Palm Icon Circle -->
+    <g transform="translate(10, 15)">
+      <circle cx="45" cy="45" r="42" fill="none" stroke="#4a5056" stroke-width="4"/>
+      <!-- Stylized Palm Fronds -->
+      <path d="M45,80 Q45,30 20,20 Q45,45 45,80 Z" fill="#4a5056"/>
+      <path d="M45,80 Q45,25 35,10 Q50,40 45,80 Z" fill="#4a5056"/>
+      <path d="M45,80 Q55,25 70,15 Q50,42 45,80 Z" fill="#4a5056"/>
+      <path d="M45,80 Q65,35 80,30 Q52,50 45,80 Z" fill="#4a5056"/>
+    </g>
+    <!-- Text -->
+    <g transform="translate(120, 35)">
+      <text x="0" y="32" font-family="'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="4" fill="#3a3f45">ROYAL PALMS</text>
+      <line x1="0" y1="48" x2="225" y2="48" stroke="#8c9298" stroke-width="1"/>
+      <text x="112" y="76" font-family="Georgia, serif" font-size="20" font-style="italic" fill="#4a5056" text-anchor="middle">Senior Living</text>
+    </g>
+  </g>
+</svg>

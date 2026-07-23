@@ -7,13 +7,20 @@
     <title>French Salon | Cultural Experiences for Senior Living</title>
     <meta name="description"
         content="Engaging, sensory, and easy-to-host French cultural sessions designed to bring residents a little trip to France.">
-    <link rel="stylesheet" href="style.css?v=6">
-    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="style.css?v=38">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- Floating Rate Us on Google Side Button -->
+    <a href="https://share.google/I90cQ5FetF9ujFtT4" target="_blank" rel="noopener" class="floating-google-btn">
+        <i class="fa-brands fa-google" style="color: #4285F4; font-size: 1.1rem;"></i>
+        <span>Rate Us on Google</span>
+        <span style="color: #fbbc05;">★ 5.0</span>
+    </a>
+
+    <!-- Header Navigation -->
     <header>
         <a href="index.html" class="logo-link">
             <img src="assets/images/logo.png" alt="French Salon Logo" class="logo-img">
@@ -25,143 +32,262 @@
                 <li><a href="pricing.html">Offerings</a></li>
             </ul>
         </nav>
-        <a href="booking.html" class="btn-primary">Book Now</a>
+        <div class="nav-dropdown">
+            <a href="booking.html" class="btn-primary nav-dropdown-btn">
+                Book Experience <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem; margin-left: 6px;"></i>
+            </a>
+            <div class="dropdown-menu">
+                <a href="booking.html?package=pilot" class="dropdown-item">
+                    <span>Intro Pilot</span>
+                    <span class="item-price">Free</span>
+                </a>
+                <a href="booking.html?package=single" class="dropdown-item">
+                    <span>Single Session</span>
+                    <span class="item-price">$190</span>
+                </a>
+                <a href="booking.html?package=series" class="dropdown-item">
+                    <span>4-Week Series <span class="badge">Popular</span></span>
+                    <span class="item-price">$600</span>
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
         <!-- 1. Hero Section -->
         <section class="hero" id="home">
             <div class="hero-content">
-                <h1 style="font-family: var(--font-fun); font-size: 4rem; color: var(--color-navy); margin-bottom: 0.5rem; margin-top: 0; line-height: 1.1; font-weight: normal;">French Salon</h1>
-                <h2 style="font-family: var(--font-heading); color: var(--color-navy); font-size: 2.2rem; font-weight: 500; margin-top: 0; margin-bottom: 1.5rem; line-height: 1.3;">French cultural experiences for senior living communities</h2>
-                <p>Immersive French cultural experiences designed to spark <strong>conversation</strong>, <strong>memory</strong>, and <strong>connection</strong>.<br>Thoughtfully engaging all <strong>five senses</strong> through <strong>sound</strong>, <strong>imagery</strong>, <strong>texture</strong>, <strong>scent</strong>, and <strong>taste</strong>.</p>
-                <a href="#booking" class="btn-primary">Book a Complimentary Session</a>
+                <h1 style="font-family: var(--font-brand); font-size: 4.8rem; color: var(--color-navy); margin-bottom: 0.4rem; margin-top: 0; line-height: 1.05; font-weight: 400;">French Salon</h1>
+                <h2 style="font-family: var(--font-heading); color: var(--color-navy); font-size: 1.95rem; font-weight: 500; margin-top: 0; margin-bottom: 1.5rem; line-height: 1.35;">
+                    French cultural experiences for senior living communities</h2>
+
+                <p style="font-size: 1.15rem; line-height: 1.75; margin-bottom: 2rem; color: var(--color-text);">
+                    Immersive French cultural experiences designed to spark <strong>conversation</strong>, <strong>memory</strong>, and <strong>connection</strong>.
+                </p>
+
+                <div class="hero-buttons" style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.2rem;">
+                    <a href="booking.html?package=pilot" class="btn-primary">Book a Complimentary Session</a>
+                    <a href="booking.html?package=single" class="btn-secondary">Book a Session</a>
+                </div>
+
+                <!-- Trusted By Logos (Hero Placement) -->
+                <div class="hero-trusted-logos">
+                    <span style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: var(--color-navy); margin-bottom: 0.8rem; opacity: 0.85;">
+                        Trusted by Senior Living Communities:
+                    </span>
+                    <div style="display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;">
+                        <img src="assets/images/american_house_logo.svg" alt="American House Senior Living Communities" style="height: 46px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                        <img src="assets/images/royal_palms_logo.svg" alt="Royal Palms Senior Living" style="height: 46px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                        <img src="assets/images/arbor_terrace_logo.svg" alt="Arbor Terrace Citrus Park" style="height: 46px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                    </div>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="assets/images/french_salon_hero.png" alt="Older couple enjoying a French cafe in Paris" />
+                <img src="assets/images/french_salon_hero.png" alt="French Salon Cultural Experience for Senior Living">
             </div>
         </section>
 
         <hr class="section-divider">
 
-        <!-- 2. How it works -->
+        <!-- 2. How It Works -->
         <section id="how-it-works">
             <h2 class="section-title">How It Works</h2>
-            <p class="swipe-hint">Swipe <i class="fa-solid fa-arrow-right-long"></i></p>
             <div class="steps-container">
                 <div class="step-card">
-                    <h3>Thoughtfully curated French escapes</h3>
-                    <p>Every session is centered around a French place, story, or cultural theme &mdash; thoughtfully
-                        prepared to offer residents a fresh and engaging experience.</p>
+                    <div class="step-big-num">01</div>
+                    <div class="step-card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3>Curated French Escapes</h3>
+                    <p>Sessions centered around French culture, music, and iconic stories.</p>
                 </div>
                 <div class="step-card">
-                    <h3>Fully immersive resident experiences</h3>
-                    <p>Through conversation, music, imagery, sensory elements, and a small taste of France, residents
-                        are invited into a warm and memorable shared experience.</p>
+                    <div class="step-big-num">02</div>
+                    <div class="step-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Immersive Sessions</h3>
+                    <p>Engages residents through conversation, imagery, and sensory tastes.</p>
                 </div>
                 <div class="step-card">
-                    <h3>Completely simple for your care team</h3>
-                    <p>Sessions are easy to host, fully prepared, and designed to fit naturally into your activity
-                        calendar &mdash; with no preparation needed on your end.</p>
+                    <div class="step-big-num">03</div>
+                    <div class="step-card-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h3>Zero Staff Prep</h3>
+                    <p>Fully prepared and designed to fit naturally into your calendar.</p>
                 </div>
             </div>
         </section>
 
         <hr class="section-divider">
 
-        <!-- 3. What residents experience -->
-        <section id="experience">
-            <h2 class="section-title">Why It Matters</h2>
-            <p class="swipe-hint">Swipe & Click <i class="fa-solid fa-arrow-right-long"></i></p>
-            <div class="experience-grid">
-                <div class="exp-item flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4>Social connection</h4>
-                        </div>
-                        <div class="flip-card-back"
-                            style="background-image: url('assets/images/diverse_social_connection_1777569444464.png'); background-size: cover; background-position: center;">
-                        </div>
-                    </div>
-                </div>
-                <div class="exp-item flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4>Cognitive stimulation</h4>
-                        </div>
-                        <div class="flip-card-back"
-                            style="background-image: url('assets/images/diverse_cognitive_stimulation_1777569456527.png'); background-size: cover; background-position: center;">
-                        </div>
-                    </div>
-                </div>
-                <div class="exp-item flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4>Sensory engagement</h4>
-                        </div>
-                        <div class="flip-card-back"
-                            style="background-image: url('assets/images/diverse_sensory_engagement_1777569508793.png'); background-size: cover; background-position: center;">
-                        </div>
-                    </div>
-                </div>
-                <div class="exp-item flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4>Emotional well-being</h4>
-                        </div>
-                        <div class="flip-card-back"
-                            style="background-image: url('assets/images/diverse_emotional_wellbeing_1777569470743.png'); background-size: cover; background-position: center;">
-                        </div>
-                    </div>
-                </div>
-                <div class="exp-item flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h4>Conversation & memory</h4>
-                        </div>
-                        <div class="flip-card-back"
-                            style="background-image: url('assets/images/diverse_conversation_memory_1777569483824.png'); background-size: cover; background-position: center;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <hr class="section-divider">
-
-        <!-- 4. Simple contact / booking -->
-        <section class="booking-section" id="booking">
-            <h2 class="section-title">Book a Complimentary Session</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Experience the magic of the French Salon. Fill out the form below to schedule your community's free
-                introductory pilot.
+        <!-- 3. Visually Appealing Auto-Rotating 5 Senses Showcase -->
+        <section id="senses-section">
+            <h2 class="section-title">Engaging the 5 Senses</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 0.8rem auto; font-size: 1.1rem; color: var(--color-text);">
+                A multi-sensory journey designed to transport residents to France.
             </p>
-            <form class="booking-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Community or Contact Name" required>
+            <p class="swipe-hint">Swipe <i class="fa-solid fa-arrow-right-long"></i></p>
+
+            <div class="senses-carousel" style="margin-top: 1.5rem;">
+                <div class="senses-slides">
+                    <div class="sense-slide active">
+                        <div class="sense-slide-inner">
+                            <div class="sense-slide-image">
+                                <img src="assets/images/sense_sound_normandy.png" alt="French Accordion Street Music">
+                            </div>
+                            <div class="sense-slide-text">
+                                <div class="sense-icon-wrapper"><i class="fa-solid fa-music"></i></div>
+                                <h3>Sound</h3>
+                                <p>Accordion melodies & French street music that inspire warm recognition.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sense-slide">
+                        <div class="sense-slide-inner">
+                            <div class="sense-slide-image">
+                                <img src="assets/images/sense_imagery.png" alt="Charming French Village">
+                            </div>
+                            <div class="sense-slide-text">
+                                <div class="sense-icon-wrapper"><i class="fa-solid fa-camera-retro"></i></div>
+                                <h3>Imagery</h3>
+                                <p>Vivid visual travelogues of charming villages, castles, and historic landmarks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sense-slide">
+                        <div class="sense-slide-inner">
+                            <div class="sense-slide-image">
+                                <img src="assets/images/sense_scent.png" alt="Fresh Lavender & Bakery Scents">
+                            </div>
+                            <div class="sense-slide-text">
+                                <div class="sense-icon-wrapper"><i class="fa-solid fa-wind"></i></div>
+                                <h3>Scent</h3>
+                                <p>Aromas of fresh lavender fields and warm French bakery delights.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sense-slide">
+                        <div class="sense-slide-inner">
+                            <div class="sense-slide-image">
+                                <img src="assets/images/sense_taste.png" alt="French Macarons & Pastries">
+                            </div>
+                            <div class="sense-slide-text">
+                                <div class="sense-icon-wrapper"><i class="fa-solid fa-utensils"></i></div>
+                                <h3>Taste</h3>
+                                <p>Delightful sampling of authentic macarons and sweet French treats.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sense-slide">
+                        <div class="sense-slide-inner">
+                            <div class="sense-slide-image">
+                                <img src="assets/images/sense_texture.png" alt="Tactile Vintage French Maps">
+                            </div>
+                            <div class="sense-slide-text">
+                                <div class="sense-icon-wrapper"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                                <h3>Texture</h3>
+                                <p>Tactile cultural items, vintage maps, and fabrics to hold and explore.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+                <div class="carousel-dots" style="margin-top: 2rem;">
+                    <span class="dot active" data-slide="0"><span>Sound</span></span>
+                    <span class="dot" data-slide="1"><span>Imagery</span></span>
+                    <span class="dot" data-slide="2"><span>Scent</span></span>
+                    <span class="dot" data-slide="3"><span>Taste</span></span>
+                    <span class="dot" data-slide="4"><span>Texture</span></span>
                 </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- 4. Visual Why It Matters Section -->
+        <section id="why-it-matters">
+            <h2 class="section-title">Why It Matters</h2>
+            <div class="why-grid-visual">
+                <div class="why-card-visual">
+                    <div class="why-card-image">
+                        <img src="assets/images/why_memory_diverse.png" alt="Sparks Memory & Reflection">
+                    </div>
+                    <div class="why-card-content">
+                        <h3>Sparks Memory & Reflection</h3>
+                        <p>Fosters recall and nostalgic storytelling among residents.</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <textarea id="notes" name="notes" placeholder="Any special requests or details?" rows="3"
-                        style="width: 100%; padding: 15px 20px; border: none; border-radius: 20px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9); transition: var(--transition); resize: vertical;"></textarea>
+                <div class="why-card-visual">
+                    <div class="why-card-image">
+                        <img src="assets/images/why_social_wheelchair.png" alt="Encourages Social Connection">
+                    </div>
+                    <div class="why-card-content">
+                        <h3>Encourages Social Connection</h3>
+                        <p>Brings residents together in shared conversation and laughter.</p>
+                    </div>
                 </div>
-                <button type="submit" class="btn-submit">Request Free Pilot</button>
-            </form>
+                <div class="why-card-visual">
+                    <div class="why-card-image">
+                        <img src="assets/images/why_sensory_diverse.png" alt="Engages the Senses">
+                    </div>
+                    <div class="why-card-content">
+                        <h3>Engages the Senses</h3>
+                        <p>Stimulates cognitive well-being through sight, sound, scent, touch, and taste.</p>
+                    </div>
+                </div>
+                <div class="why-card-visual">
+                    <div class="why-card-image">
+                        <img src="assets/images/why_joy_white.png" alt="Brings Joy & Variety">
+                    </div>
+                    <div class="why-card-content">
+                        <h3>Brings Joy & Variety</h3>
+                        <p>Offers a refreshing cultural trip without leaving the community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- 5. Booking Section -->
+        <section id="booking">
+            <div class="booking-section">
+                <h2 class="section-title" style="color: var(--color-white);">Book Your Experience</h2>
+                <p style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    We are thrilled to bring the magic of France to your community. Please fill out the details below to secure your session.
+                </p>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Community or Contact Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Please enter a valid email address (e.g. user@example.com)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="package" required
+                            style="width: 100%; padding: 15px 40px 15px 20px; border: 2px solid var(--color-gold); border-radius: 30px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23b59b56%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 20px top 50%; background-size: 12px auto; appearance: none; -webkit-appearance: none; transition: var(--transition); cursor: pointer; color: var(--color-navy);">
+                            <option value="" disabled selected>Select Package</option>
+                            <option value="pilot">Intro Pilot (Free)</option>
+                            <option value="single">Single Session ($190)</option>
+                            <option value="series">4-Week Series ($600)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="notes" placeholder="Any special requests or details?" rows="3"
+                            style="width: 100%; padding: 15px 20px; border: none; border-radius: 20px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9); transition: var(--transition); resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Confirm Booking</button>
+                </form>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; French Salon | <a href="mailto:contact@french-salon.com"
                 style="color: inherit; text-decoration: none;">Contact: contact@french-salon.com</a></p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js?v=36"></script>
 </body>
 
 </html>
