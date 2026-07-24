@@ -1,16 +1,19 @@
 function initApp() {
 
     /* ==========================================================================
-       1. Auto-Rotating 5 Senses Cross-Fade Carousel (5-second interval + Touch Swipe)
+       1. Auto-Rotating Carousel (Why It Matters & Carousel Support)
        ========================================================================== */
-    const carouselContainer = document.querySelector('.senses-carousel');
-    if (carouselContainer) {
-        const slides = carouselContainer.querySelectorAll('.sense-slide');
-        const dots = carouselContainer.querySelectorAll('.dot');
+    const carousels = document.querySelectorAll('.why-carousel, .senses-carousel');
+    
+    carousels.forEach(carouselContainer => {
+        const slides = carouselContainer.querySelectorAll('.why-slide, .sense-slide');
+        const dots = carouselContainer.querySelectorAll('.why-dot, .dot');
+
+        if (!slides.length) return;
 
         let currentSlide = 0;
         let slideTimer = null;
-        const DURATION = 5000; // Rotates every 5 seconds per user request!
+        const DURATION = 5000; // 5-second auto-rotation
 
         function showSlide(index) {
             if (index === currentSlide && slides[index].classList.contains('active')) return;
@@ -77,7 +80,7 @@ function initApp() {
 
         // Start auto-rotation immediately
         resetTimer();
-    }
+    });
 
     /* ==========================================================================
        2. Web3Forms Submission Handler
