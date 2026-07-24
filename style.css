@@ -414,7 +414,7 @@ section {
 .why-card-visual {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
-    border: 1.5px solid var(--color-gold);
+    border: 1px solid var(--color-gold-muted);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-soft);
