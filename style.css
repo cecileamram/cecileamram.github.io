@@ -112,8 +112,8 @@ header {
 }
 
 .logo-img {
-    height: 145px;
-    margin: -10px 0;
+    height: 125px;
+    margin: -6px 0;
     object-fit: contain;
     mix-blend-mode: multiply;
     transition: var(--transition);
@@ -766,7 +766,7 @@ footer {
     }
 
     .logo-img {
-        height: 115px;
+        height: 100px;
         margin: 0;
     }
 
