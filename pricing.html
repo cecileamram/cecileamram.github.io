@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offerings | French Salon</title>
-    <meta name="description" content="Pricing and offerings for French cultural sessions.">
-    <link rel="stylesheet" href="style.css?v=43">
+    <meta name="description" content="Immersive French cultural experience packages for senior living communities.">
+    <link rel="stylesheet" href="style.css?v=45">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -35,58 +35,130 @@
                 Book Experience <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem; margin-left: 6px;"></i>
             </a>
             <div class="dropdown-menu">
+                <a href="booking.html?package=discovery" class="dropdown-item">
+                    <div class="item-info">
+                        <span class="item-name">French Discovery</span>
+                    </div>
+                    <span class="item-price">$195</span>
+                </a>
+                <a href="booking.html?package=tour" class="dropdown-item">
+                    <div class="item-info">
+                        <span class="item-name">Grand Tour</span>
+                        <span class="item-sub-badge">⭐ Most Popular</span>
+                    </div>
+                    <span class="item-price">From $180</span>
+                </a>
+                <a href="booking.html?package=celebration" class="dropdown-item">
+                    <div class="item-info">
+                        <span class="item-name">Grand Celebration</span>
+                    </div>
+                    <span class="item-price">$295</span>
+                </a>
                 <a href="booking.html?package=pilot" class="dropdown-item">
-                    <span>Intro Pilot</span>
+                    <div class="item-info">
+                        <span class="item-name">Intro Pilot</span>
+                        <span class="item-sub-badge free-badge">Complimentary 60-Min</span>
+                    </div>
                     <span class="item-price">Free</span>
-                </a>
-                <a href="booking.html?package=single" class="dropdown-item">
-                    <span>Single Session</span>
-                    <span class="item-price">$190</span>
-                </a>
-                <a href="booking.html?package=series" class="dropdown-item">
-                    <span>4-Week Series <span class="badge">Popular</span></span>
-                    <span class="item-price">$600</span>
                 </a>
             </div>
         </div>
     </header>
 
     <main>
-        <section style="padding-top: 4rem; min-height: 80vh;">
-            <h1 class="section-title">Our Offerings</h1>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3.5rem auto; font-size: 1.2rem; color: var(--color-text);">
-                Choose the perfect cultural experience package for your senior living community.
-            </p>
-
-            <div class="pricing-cards">
-                <div class="price-card">
-                    <h3>Intro Pilot</h3>
-                    <div class="price-value">Free</div>
-                    <p>A complimentary first session to see how your residents respond to the experience.</p>
-                    <a href="booking.html?package=pilot" class="btn-primary" style="width: 100%;">Book Pilot</a>
-                </div>
-
-                <div class="price-card">
-                    <h3>Single Session</h3>
-                    <div class="price-value">$190</div>
-                    <p>A one-time immersive cultural journey for your community, complete with sensory elements.</p>
-                    <a href="booking.html?package=single" class="btn-primary" style="width: 100%;">Book Session</a>
-                </div>
-
-                <div class="price-card featured">
-                    <div class="price-card-badge">Most Popular</div>
-                    <h3>4-Week Series</h3>
-                    <div class="price-value">$600</div>
-                    <p>A comprehensive month-long exploration of French culture, themes, and destinations.</p>
-                    <a href="booking.html?package=series" class="btn-primary" style="width: 100%;">Book Series</a>
-                </div>
+        <section style="padding-top: 3.5rem; padding-bottom: 5rem; min-height: 80vh;">
+            
+            <!-- Page Header -->
+            <div class="pricing-header">
+                <h1>Choose Your French Experience</h1>
+                <div class="subtitle">Bring the charm of France to your community.</div>
+                <p class="description">
+                    Every French Salon is an immersive 60-minute cultural journey featuring beautiful multimedia, authentic French music, storytelling, interactive activities, and a homemade French tasting.
+                </p>
             </div>
+
+            <!-- 3 Pricing Cards -->
+            <div class="pricing-cards">
+
+                <!-- Option 1: French Discovery -->
+                <div class="price-card">
+                    <div>
+                        <h3>🇫🇷 French Discovery</h3>
+                        <div class="price-value">$195 per session</div>
+                        <p class="price-card-desc">A delightful introduction to French culture.</p>
+                        <ul class="price-card-features">
+                            <li><i class="fa-solid fa-circle-check"></i> 60-minute immersive presentation</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Homemade French tasting</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Music, storytelling & resident participation</li>
+                        </ul>
+                        <div class="price-card-tagline">Perfect for communities wishing to discover French Salon.</div>
+                    </div>
+                    <a href="booking.html?package=discovery" class="btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Book French Discovery</a>
+                </div>
+
+                <!-- Option 2: Grand Tour de France (Most Popular) -->
+                <div class="price-card featured">
+                    <div class="price-card-badge">⭐ MOST POPULAR ⭐</div>
+                    <div>
+                        <h3>🇫🇷✨ Grand Tour de France</h3>
+                        <div class="price-value">Starting at $180 per session</div>
+                        <span class="price-subtitle">Available with a 6-session series.</span>
+                        <p class="price-card-desc">Take your residents on a year-long journey through France.</p>
+                        <ul class="price-card-features">
+                            <li class="feature-bold" style="color: var(--color-gold);"><i class="fa-solid fa-star" style="color: var(--color-gold);"></i> Everything in French Discovery, plus:</li>
+                            <li><i class="fa-solid fa-circle-check"></i> A different region of France each month</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Beautiful monthly newsletter for residents and families</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Priority scheduling</li>
+                            <li><i class="fa-solid fa-circle-check"></i> A complete cultural enrichment series throughout the year</li>
+                        </ul>
+                        <div class="region-highlight-box">
+                            Travel through Paris, Provence, Normandy, Brittany, Alsace, the French Riviera, and many more beautiful regions of France.
+                        </div>
+                    </div>
+                    <a href="booking.html?package=tour" class="btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Book Grand Tour</a>
+                </div>
+
+                <!-- Option 3: Grand French Celebration -->
+                <div class="price-card">
+                    <div>
+                        <h3>🇫🇷🏰 Grand French Celebration</h3>
+                        <div class="price-value">$295 per event</div>
+                        <p class="price-card-desc">Perfect for holidays and special occasions.</p>
+                        <ul class="price-card-features">
+                            <li class="feature-bold" style="color: var(--color-gold);"><i class="fa-solid fa-star" style="color: var(--color-gold);"></i> Everything in French Discovery, plus:</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Customized presentation for your community</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Premium tasting experience</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Seasonal décor and themed table display</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Holiday and celebration themes</li>
+                        </ul>
+                        <div class="price-card-tagline">Ideal for larger community events.</div>
+                    </div>
+                    <a href="booking.html?package=celebration" class="btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Book Grand Celebration</a>
+                </div>
+
+            </div>
+
+            <!-- Free Intro Pilot Callout Banner -->
+            <div style="max-width: 1060px; margin: 3.5rem auto 0 auto; background: linear-gradient(135deg, rgba(26, 42, 64, 0.96), rgba(44, 62, 80, 0.98)); border-radius: 24px; padding: 2.5rem 2rem; color: #ffffff; text-align: center; box-shadow: 0 15px 40px rgba(26, 42, 64, 0.25); border: 2px solid var(--color-gold);">
+                <div style="display: inline-block; background: var(--color-gold); color: var(--color-navy); padding: 4px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">
+                    Try Before You Book
+                </div>
+                <h2 style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 0.8rem; color: #ffffff;">
+                    Book a Free 60-Minute Intro Pilot
+                </h2>
+                <p style="font-size: 1.1rem; max-width: 680px; margin: 0 auto 1.8rem auto; opacity: 0.95; line-height: 1.6;">
+                    Curious how your residents will respond? Experience French Salon in your community with a complimentary 60-minute interactive session, complete with mini tasting and music!
+                </p>
+                <a href="booking.html?package=pilot" class="btn-primary" style="background: var(--color-gold); color: var(--color-navy); border-color: var(--color-gold); font-weight: 700; padding: 14px 36px;">
+                    Request Free Intro Pilot →
+                </a>
+            </div>
+
         </section>
     </main>
 
     <footer>
-        <p>&copy; French Salon | <a href="mailto:contact@french-salon.com"
-                style="color: inherit; text-decoration: none;">Contact: contact@french-salon.com</a></p>
+        <p>&copy; French Salon | <a href="mailto:contact@french-salon.com" style="color: inherit; text-decoration: none;">Contact: contact@french-salon.com</a></p>
     </footer>
 
 </body>

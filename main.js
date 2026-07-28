@@ -124,6 +124,49 @@ function initApp() {
         });
     });
 
+    /* ==========================================================================
+       3. Header Dropdown Mobile/Click Toggle & Home Form Dynamic Package
+       ========================================================================== */
+    const navDropdowns = document.querySelectorAll('.nav-dropdown');
+    navDropdowns.forEach(dropdown => {
+        const btn = dropdown.querySelector('.nav-dropdown-btn');
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                // If clicked directly on mobile/touch screen, toggle active class
+                if (window.innerWidth <= 768 || e.target.classList.contains('fa-chevron-down')) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+
+    // Close dropdown on outside click
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-dropdown')) {
+            navDropdowns.forEach(d => d.classList.remove('active'));
+        }
+    });
+
+    // Home Page Package Dynamic Button Text
+    const homePackageSelect = document.getElementById('home-package-select');
+    const homeSubmitBtn = document.getElementById('home-submit-btn');
+
+    if (homePackageSelect && homeSubmitBtn) {
+        homePackageSelect.addEventListener('change', (e) => {
+            const val = e.target.value;
+            if (val === 'pilot') {
+                homeSubmitBtn.innerText = 'Request Free Intro Pilot →';
+            } else if (val === 'discovery') {
+                homeSubmitBtn.innerText = 'Book French Discovery ($195) →';
+            } else if (val === 'tour') {
+                homeSubmitBtn.innerText = 'Book Grand Tour Series →';
+            } else if (val === 'celebration') {
+                homeSubmitBtn.innerText = 'Book Grand Celebration ($295) →';
+            }
+        });
+    }
+
 }
 
 if (document.readyState === 'loading') {
