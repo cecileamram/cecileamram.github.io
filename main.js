@@ -162,7 +162,7 @@ function initApp() {
             } else if (val === 'tour') {
                 homeSubmitBtn.innerText = 'Book Grand Tour Series →';
             } else if (val === 'celebration') {
-                homeSubmitBtn.innerText = 'Book Grand Celebration ($295) →';
+                homeSubmitBtn.innerText = 'Book Grand Celebration ($395) →';
             }
         });
     }
