@@ -157,8 +157,8 @@ function initApp() {
             const val = e.target.value;
             if (val === 'pilot') {
                 homeSubmitBtn.innerText = 'Request Free Intro Pilot →';
-            } else if (val === 'discovery') {
-                homeSubmitBtn.innerText = 'Book French Discovery ($195) →';
+            } else if (val === 'sur-mesure' || val === 'discovery') {
+                homeSubmitBtn.innerText = 'Create Your French Salon ($185) →';
             } else if (val === 'tour') {
                 homeSubmitBtn.innerText = 'Book Grand Tour Series →';
             } else if (val === 'celebration') {

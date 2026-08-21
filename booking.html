@@ -35,11 +35,11 @@
                 Book Experience <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem; margin-left: 6px;"></i>
             </a>
             <div class="dropdown-menu">
-                <a href="booking.html?package=discovery" class="dropdown-item">
+                <a href="booking.html?package=sur-mesure" class="dropdown-item">
                     <div class="item-info">
-                        <span class="item-name">French Discovery</span>
+                        <span class="item-name">French Salon Sur Mesure</span>
                     </div>
-                    <span class="item-price">$195</span>
+                    <span class="item-price">$185</span>
                 </a>
                 <a href="booking.html?package=tour" class="dropdown-item">
                     <div class="item-info">
@@ -87,7 +87,7 @@
                     <div class="form-group">
                         <select id="package" name="package" required
                             style="width: 100%; padding: 15px 40px 15px 20px; border: 2px solid var(--color-gold); border-radius: 30px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23b59b56%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 20px top 50%; background-size: 12px auto; appearance: none; -webkit-appearance: none; transition: var(--transition); cursor: pointer; color: var(--color-navy);">
-                            <option value="discovery">French Discovery ($195 per session)</option>
+                            <option value="sur-mesure">French Salon Sur Mesure ($185 per session)</option>
                             <option value="tour" selected>Grand Tour de France (Starting at $180/session - 6 series min.)</option>
                             <option value="celebration">Grand French Celebration ($395 per event)</option>
                             <option value="pilot">Intro Pilot (Complimentary 60-Min)</option>
@@ -115,10 +115,10 @@
             const desc = document.getElementById('booking-desc');
             const btn = document.getElementById('submit-btn');
 
-            if (packageType === 'discovery' || packageType === 'single') {
-                title.innerText = 'Book French Discovery';
-                desc.innerText = 'Treat your residents to a delightful 60-minute introduction to French culture, music, and tasting for $195 per session.';
-                btn.innerText = 'Confirm Booking';
+            if (packageType === 'sur-mesure' || packageType === 'discovery' || packageType === 'single') {
+                title.innerText = 'Book French Salon Sur Mesure';
+                desc.innerText = 'Choose a special French theme, and Cecile will create a customized French Salon session around it for your residents for $185 per session.';
+                btn.innerText = 'Create Your French Salon';
             } else if (packageType === 'tour' || packageType === 'series') {
                 title.innerText = 'Book Grand Tour de France';
                 desc.innerText = 'Take your residents on a year-long journey through France with monthly regional themes, newsletters, and priority scheduling. Starting at $180 per session.';
@@ -141,6 +141,8 @@
 
             if (packageType && selectElement.querySelector(`option[value="${packageType}"]`)) {
                 selectElement.value = packageType;
+            } else if (packageType === 'discovery') {
+                selectElement.value = 'sur-mesure';
             }
             
             // Initialize with current value

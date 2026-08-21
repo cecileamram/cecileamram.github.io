@@ -735,6 +735,84 @@ section {
     text-align: center;
 }
 
+/* --- Custom Sur Mesure Card Styling --- */
+.price-card.sur-mesure-card {
+    border: 1.5px solid var(--color-gold);
+    background: linear-gradient(150deg, #ffffff 0%, rgba(250, 246, 238, 0.95) 100%);
+    box-shadow: 0 14px 35px rgba(197, 160, 89, 0.12);
+}
+
+.price-card.sur-mesure-card:hover {
+    border-color: var(--color-gold);
+    box-shadow: 0 22px 50px rgba(197, 160, 89, 0.22);
+    transform: translateY(-8px);
+}
+
+.price-card-badge.sur-mesure-badge {
+    background: linear-gradient(135deg, var(--color-navy), var(--color-navy-light));
+    color: var(--color-gold);
+    border: 1px solid var(--color-gold);
+    font-size: 0.78rem;
+    padding: 5px 16px;
+}
+
+.sur-mesure-tagline {
+    font-size: 0.93rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    line-height: 1.45;
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
+.includes-label {
+    font-weight: 700;
+    color: var(--color-navy);
+    font-size: 0.86rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.themes-highlight-box {
+    background: rgba(197, 160, 89, 0.1);
+    border: 1px dashed var(--color-gold);
+    border-radius: 14px;
+    padding: 12px 14px;
+    margin: 1rem 0;
+}
+
+.themes-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.themes-list {
+    font-size: 0.88rem;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin: 0;
+    font-style: italic;
+}
+
+.sur-mesure-closing {
+    font-family: var(--font-heading);
+    font-size: 0.96rem;
+    font-style: italic;
+    color: var(--color-red);
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
 /* Why Communities Love Section */
 .why-love-section {
     max-width: 1100px;
