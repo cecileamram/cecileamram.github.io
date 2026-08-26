@@ -927,19 +927,107 @@ section {
 
 /* --- Booking / Contact Section --- */
 .booking-section {
-    background-color: var(--color-navy);
-    color: var(--color-white);
+    background: linear-gradient(150deg, #ffffff, rgba(247, 242, 231, 0.96));
+    color: var(--color-text);
     text-align: center;
     border-radius: 24px;
     max-width: 880px;
     margin: 0 auto 3rem auto;
     padding: 4rem 3rem;
-    box-shadow: 0 20px 45px rgba(26, 42, 64, 0.16);
-    border: 1px solid rgba(197, 160, 89, 0.25);
+    box-shadow: 0 14px 35px rgba(26, 42, 64, 0.08);
+    border: 1.5px solid var(--color-gold-muted);
+}
+
+.special-events-section {
+    background: #ffffff;
+    color: var(--color-text);
+    max-width: 960px;
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+    padding: 5rem 4rem;
+    border: 1px solid var(--color-gold-muted);
+    box-shadow: 0 16px 40px rgba(26, 42, 64, 0.08);
+}
+
+.booking-section.special-events-section h2 {
+    color: var(--color-red);
+    font-family: var(--font-heading);
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.special-events-section p {
+    max-width: 680px;
+    margin: 0 auto 1rem;
+    line-height: 1.65;
+}
+
+.special-events-section .btn-primary {
+    margin-top: 1.8rem;
 }
 
 .booking-section h2 {
-    color: var(--color-white);
+    color: var(--color-navy);
+}
+
+.booking-offer-card {
+    max-width: 760px;
+    margin: 0 auto 2.5rem;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.booking-offer-card h2 {
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+}
+
+.booking-offer-card #booking-desc {
+    color: var(--color-text);
+}
+
+.booking-package-details {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem 1.8rem;
+    border-top: 1px solid rgba(197, 160, 89, 0.45);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.45);
+    background: transparent;
+    text-align: left;
+    color: var(--color-navy);
+}
+
+.booking-package-details strong {
+    display: block;
+    color: var(--color-red);
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.booking-section .form-group input,
+.booking-section .form-group textarea {
+    border: 1px solid var(--color-gold-muted);
+    box-shadow: 0 4px 15px rgba(26, 42, 64, 0.04);
+}
+
+.booking-package-details span {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.booking-package-details ul {
+    margin: 0.6rem 0 0.8rem 1.2rem;
+    line-height: 1.6;
+}
+
+.booking-package-details p {
+    margin: 0.8rem 0 0;
+    line-height: 1.6;
 }
 
 .booking-section .section-title::after {

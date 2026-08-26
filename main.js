@@ -132,11 +132,8 @@ function initApp() {
         const btn = dropdown.querySelector('.nav-dropdown-btn');
         if (btn) {
             btn.addEventListener('click', (e) => {
-                // If clicked directly on mobile/touch screen, toggle active class
-                if (window.innerWidth <= 768 || e.target.classList.contains('fa-chevron-down')) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
-                }
+                e.preventDefault();
+                dropdown.classList.toggle('active');
             });
         }
     });
@@ -158,7 +155,7 @@ function initApp() {
             if (val === 'pilot') {
                 homeSubmitBtn.innerText = 'Request Free Intro Pilot →';
             } else if (val === 'sur-mesure' || val === 'discovery') {
-                homeSubmitBtn.innerText = 'Create Your French Salon ($185) →';
+                homeSubmitBtn.innerText = 'Choose Your Experience ($225) →';
             } else if (val === 'tour') {
                 homeSubmitBtn.innerText = 'Book Grand Tour Series →';
             } else if (val === 'celebration') {

@@ -36,31 +36,24 @@
                 Book Experience <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem; margin-left: 6px;"></i>
             </a>
             <div class="dropdown-menu">
-                <a href="booking.html?package=sur-mesure" class="dropdown-item">
+                <a href="pricing.html#discovery" class="dropdown-item">
                     <div class="item-info">
-                        <span class="item-name">French Salon Sur Mesure</span>
+                        <span class="item-name">French Discovery</span>
                     </div>
-                    <span class="item-price">$185</span>
+                    <span class="item-price">$195</span>
                 </a>
-                <a href="booking.html?package=tour" class="dropdown-item">
+                <a href="pricing.html#custom" class="dropdown-item">
                     <div class="item-info">
-                        <span class="item-name">Grand Tour</span>
-                        <span class="item-sub-badge">⭐ Most Popular</span>
+                        <span class="item-name">Custom French Experience</span>
                     </div>
-                    <span class="item-price">From $180</span>
+                    <span class="item-price">$225</span>
                 </a>
-                <a href="booking.html?package=celebration" class="dropdown-item">
+                <a href="pricing.html#tour" class="dropdown-item">
                     <div class="item-info">
-                        <span class="item-name">Grand Celebration</span>
+                        <span class="item-name">Grand Tour de France</span>
+                        <span class="item-sub-badge">⭐ Best Value</span>
                     </div>
-                    <span class="item-price">$395</span>
-                </a>
-                <a href="booking.html?package=pilot" class="dropdown-item">
-                    <div class="item-info">
-                        <span class="item-name">Intro Pilot</span>
-                        <span class="item-sub-badge free-badge">Complimentary 60-Min</span>
-                    </div>
-                    <span class="item-price">Free</span>
+                    <span class="item-price">$180</span>
                 </a>
             </div>
         </div>
@@ -69,12 +62,15 @@
     <main>
         <section style="padding-top: 4rem; min-height: 80vh;">
             <div class="booking-section" style="margin-top: 2rem;">
-                <h2 class="section-title" id="booking-title">Book Your Experience</h2>
-                <p id="booking-desc"
-                    style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    We are thrilled to bring the magic of France to your community. Please fill out the details below to
-                    secure your session.
-                </p>
+                <div class="booking-offer-card">
+                    <h2 id="booking-title">Book Your Experience</h2>
+                    <p id="booking-desc"
+                        style="margin-bottom: 2rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        We are thrilled to bring the magic of France to your community. Please fill out the details below to
+                        secure your session.
+                    </p>
+                    <div id="booking-features" class="booking-package-details"></div>
+                </div>
                 <form class="booking-form">
                     <div class="form-group">
                         <input type="text" id="name" name="name" placeholder="Community or Contact Name" required>
@@ -89,10 +85,8 @@
                         <select id="package" name="package" required
                             style="width: 100%; padding: 15px 40px 15px 20px; border: 2px solid var(--color-gold); border-radius: 30px; font-family: var(--font-body); font-size: 1rem; outline: none; background: rgba(255, 255, 255, 0.9) url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23b59b56%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 20px top 50%; background-size: 12px auto; appearance: none; -webkit-appearance: none; transition: var(--transition); cursor: pointer; color: var(--color-navy);">
                             <option value="discovery">French Discovery ($195 per session)</option>
-                            <option value="sur-mesure">Custom French Experience ($185 per session)</option>
-                            <option value="tour" selected>Grand Tour de France (Starting at $180/session - 6 series min.)</option>
-                            <option value="celebration">Grand French Celebration ($395 per event)</option>
-                            <option value="pilot">Intro Pilot (Complimentary 60-Min)</option>
+                            <option value="sur-mesure">Custom French Experience ($225 per session)</option>
+                            <option value="tour" selected>Grand Tour de France ($180 per session - 6-session minimum)</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -115,28 +109,36 @@
         function updateBookingDetails(packageType) {
             const title = document.getElementById('booking-title');
             const desc = document.getElementById('booking-desc');
+            const features = document.getElementById('booking-features');
             const btn = document.getElementById('submit-btn');
 
             if (packageType === 'discovery') {
-                title.innerText = 'Book French Discovery';
-                desc.innerText = 'Introduce your residents to French culture with a delightful 60-minute immersive presentation, homemade tasting, music, and storytelling for $195 per session.';
+                title.innerText = '🇫🇷 French Discovery';
+                desc.innerText = 'A complete French Salon experience. Travel to a different region of France through stories, beautiful imagery, music, traditions, and flavors.';
+                features.innerHTML = '<strong>$195 per session</strong><span>Includes:</span><ul><li>60-minute interactive French Salon</li><li>Multimedia presentation with photos and videos</li><li>French music and storytelling</li><li>Resident participation and interactive activities</li><li>Authentic French tasting inspired by the destination</li></ul><p><strong>Perfect for:</strong> Communities looking for a memorable one-time cultural experience.</p>';
                 btn.innerText = 'Book French Discovery';
             } else if (packageType === 'sur-mesure' || packageType === 'single') {
-                title.innerText = 'Book French Salon Sur Mesure';
-                desc.innerText = 'Choose a special French theme, and Cecile will create a customized French Salon session around it for your residents for $185 per session.';
-                btn.innerText = 'Create Your French Salon';
+                title.innerText = '🇫🇷✨ Custom French Experience';
+                desc.innerText = 'Choose a special French theme, and I will create a customized French Salon experience specifically for your community.';
+                features.innerHTML = '<strong>$225 per session</strong><p>Your theme. Your residents. A French experience created just for you.</p><span>Includes:</span><ul><li>60-minute customized French experience</li><li>Your choice of French theme</li><li>Personalized presentation and storytelling</li><li>Music, images, videos, and resident participation</li><li>Homemade French tasting inspired by the theme</li></ul><p><strong>Theme Ideas:</strong> Paris Back in Time • France &amp; Its Painters • French Glamour • French Music &amp; Icons • French Traditions • and more</p><p><strong>You choose the theme, and I bring it to life for your residents.</strong></p>';
+                btn.innerText = 'Choose Your Experience';
             } else if (packageType === 'tour' || packageType === 'series') {
-                title.innerText = 'Book Grand Tour de France';
-                desc.innerText = 'Take your residents on a year-long journey through France with monthly regional themes, newsletters, and priority scheduling. Starting at $180 per session.';
-                btn.innerText = 'Confirm Series Booking';
+                title.innerText = '🇫🇷✨ Grand Tour de France';
+                desc.innerText = 'Take your residents on an unforgettable journey across France. Each French Salon explores a new destination, allowing residents to discover the diversity of France throughout the year.';
+                features.innerHTML = '<strong>$180 per session</strong><span>6-session minimum</span><p><strong>⭐ Best Value</strong></p><span>Includes everything in French Discovery, plus:</span><ul><li>A different region or destination for every session</li><li>A continuing journey through France</li><li>Priority scheduling</li><li>French Salon newsletter for residents and families</li><li>Preferred series pricing</li></ul><p><strong>Residents may travel through destinations such as:</strong> Paris • Provence • Brittany • Normandy • Bordeaux • Alsace • Loire Valley • French Riviera • and more</p>';
+                btn.innerText = 'Start the Grand Tour';
             } else if (packageType === 'celebration') {
                 title.innerText = 'Book Grand French Celebration';
                 desc.innerText = 'Host an extraordinary holiday or special occasion celebration complete with customized presentation, premium tasting, and seasonal décor for $395.';
+                features.innerHTML = '<strong>$395 per event</strong><span>Special events can include:</span><ul><li>Customized French presentation</li><li>Premium tasting experience</li><li>Seasonal decor and themed details</li></ul>';
                 btn.innerText = 'Confirm Celebration Booking';
             } else if (packageType === 'pilot') {
                 title.innerText = 'Book Your Free Intro Pilot';
                 desc.innerText = 'Experience the magic of French Salon with a complimentary 60-minute introductory presentation for your community.';
+                features.innerHTML = '<strong>Complimentary 60-minute session</strong><span>Includes:</span><ul><li>Interactive French presentation</li><li>Mini tasting and music</li><li>A welcoming introduction to French Salon</li></ul>';
                 btn.innerText = 'Request Free Pilot';
+            } else {
+                features.innerHTML = '';
             }
         }
 
