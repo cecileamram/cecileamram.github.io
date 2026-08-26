@@ -588,12 +588,11 @@ section {
 
 /* Pricing Cards Layout */
 .pricing-cards {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
     gap: 2.2rem;
-    flex-wrap: wrap;
-    max-width: 1150px;
+    max-width: 1180px;
     margin: 1.5rem auto 0 auto;
 }
 
@@ -605,9 +604,8 @@ section {
     border-radius: 26px;
     padding: 2.5rem 2rem;
     text-align: left;
-    flex: 1;
-    min-width: 300px;
-    max-width: 360px;
+    min-width: 0;
+    max-width: none;
     box-shadow: 0 14px 35px rgba(26, 42, 64, 0.06);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
@@ -1134,11 +1132,12 @@ footer {
     .pricing-cards {
         gap: 2rem;
         margin-top: 1.5rem;
+        grid-template-columns: 1fr;
     }
 
     .price-card {
         width: 100%;
-        max-width: 360px;
+        max-width: 480px;
         padding: 2.8rem 1.8rem 2.2rem 1.8rem;
     }
 
